@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-CARDINAL",
+      "2": "I-CARDINAL",
+      "3": "L-CARDINAL",
+      "4": "U-CARDINAL",
+      "5": "B-name",
+      "6": "I-name",
+      "7": "L-name",
+      "8": "U-name",
+      "9": "B-phone",
+      "10": "I-phone",
+      "11": "L-phone",
+      "12": "U-phone",
+      "13": "B-seats",
+      "14": "I-seats",
+      "15": "L-seats",
+      "16": "U-seats",
+      "17": "B-time_of_day",
+      "18": "I-time_of_day",
+      "19": "L-time_of_day",
+      "20": "U-time_of_day",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-CARDINAL": 1,
+      "I-CARDINAL": 2,
+      "L-CARDINAL": 3,
+      "U-CARDINAL": 4,
+      "B-name": 5,
+      "I-name": 6,
+      "L-name": 7,
+      "U-name": 8,
+      "B-phone": 9,
+      "I-phone": 10,
+      "L-phone": 11,
+      "U-phone": 12,
+      "B-seats": 13,
+      "I-seats": 14,
+      "L-seats": 15,
+      "U-seats": 16,
+      "B-time_of_day": 17,
+      "I-time_of_day": 18,
+      "L-time_of_day": 19,
+      "U-time_of_day": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

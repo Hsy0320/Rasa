@@ -1,0 +1,46 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "utter_please_rephrase",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_please_rephrase\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_get_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_get_start\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"reservation_form\"}, \"user\": {\"intent\": \"booking\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_continue\"}, \"user\": {\"intent\": \"stop\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_ask_continue\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}]": "loop_was_interrupted",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"reservation_form\"}, \"slots\": {\"CARDINAL\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"intent\": \"affirm\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_continue\"}, \"slots\": {\"CARDINAL\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"intent\": \"stop\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_ask_continue\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"action_listen\"}, \"slots\": {\"CARDINAL\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"intent\": \"affirm\"}}]": "loop_was_interrupted",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"reservation_form\"}, \"slots\": {\"CARDINAL\": [1.0], \"name\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"intent\": \"affirm\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_slots_values\"}, \"slots\": {\"CARDINAL\": [1.0], \"name\": [1.0], \"phone\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"entities\": [\"phone\"], \"intent\": \"phone_detail\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_slots_values\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_confirm\"}, \"slots\": {\"CARDINAL\": [1.0], \"name\": [1.0], \"phone\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"entities\": [\"phone\"], \"intent\": \"phone_detail\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_anything_else\"}, \"slots\": {\"CARDINAL\": [1.0], \"name\": [1.0], \"phone\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"intent\": \"affirm\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"slots\": {\"CARDINAL\": [1.0], \"name\": [1.0], \"phone\": [1.0], \"time_of_day\": [1.0]}, \"user\": {\"intent\": \"deny\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"reservation_form\"}, \"slots\": {\"seats\": [1.0]}, \"user\": {\"intent\": \"booking\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_continue\"}, \"slots\": {\"seats\": [1.0]}, \"user\": {\"intent\": \"stop\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"action_restart\"}, \"slots\": {\"seats\": [1.0]}, \"user\": {\"intent\": \"affirm\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"reservation_form\"}, \"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"deny\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_please_rephrase\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - reservation_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "predicting default action with intent back"
+    ]
+  }
+}
